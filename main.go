@@ -9,7 +9,6 @@ import (
 	"encoding/json"
 	"encoding/csv"
 	"os"
-	//"strconv"
 )
 
 
@@ -18,18 +17,8 @@ type Repository struct {
 
 	Id int `json:"id"`
 	Name string `json:"name"`
-	//FullName string `json:"full_name"`
-	//Private bool `json:"private"`
-	//Owner struct {
-		//HTMLUrl string `json:"html_url`
-		//Type string `json:"type"`
-	//} `json:"owner"`
 	HtmlUrl string `json:"html_url"`
 	Description string `json:"description"`
-	//Url string `json:"url"`
-	//Fork bool `json:"fork"`
-
-
 }
 
 
@@ -59,7 +48,6 @@ if err != nil {
 
 
 var repository []Repository
-//var repository []map[string]interface{}
 
 err1 := json.Unmarshal([]byte(body), &repository)
 if err1 != nil {
